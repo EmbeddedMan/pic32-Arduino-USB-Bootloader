@@ -247,7 +247,7 @@ void	usb_device_enqueue(int endpoint, bool tx, byte *buffer, int length)
 	int ep;
 	bool odd;
 	int flags;
-	struct bdt *bdt;
+	volatile struct bdt *bdt;
 
 	assert(endpoint < LENGTHOF(endpoints));
 
@@ -338,7 +338,7 @@ void	usb_isr(void)
 		int endpoint2;
 		short length;
 		short value;
-		struct bdt *bdt;
+		volatile struct bdt *bdt;
 		struct setup *setup;
 
 		// we just completed a packet transfer

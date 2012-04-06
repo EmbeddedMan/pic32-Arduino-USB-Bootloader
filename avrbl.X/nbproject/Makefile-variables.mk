@@ -88,3 +88,10 @@ CND_ARTIFACT_PATH_Fubarino_SD_MX440=dist/Fubarino_SD_MX440/production/avrbl.X.pr
 CND_PACKAGE_DIR_Fubarino_SD_MX440=${CND_DISTDIR}/Fubarino_SD_MX440/package
 CND_PACKAGE_NAME_Fubarino_SD_MX440=avrbl.x.tar
 CND_PACKAGE_PATH_Fubarino_SD_MX440=${CND_DISTDIR}/Fubarino_SD_MX440/package/avrbl.x.tar
+# Fubarino_SD_MX440_2.02 configuration
+CND_ARTIFACT_DIR_Fubarino_SD_MX440_2.02=dist/Fubarino_SD_MX440_2.02/production
+CND_ARTIFACT_NAME_Fubarino_SD_MX440_2.02=avrbl.X.production.hex
+CND_ARTIFACT_PATH_Fubarino_SD_MX440_2.02=dist/Fubarino_SD_MX440_2.02/production/avrbl.X.production.hex
+CND_PACKAGE_DIR_Fubarino_SD_MX440_2.02=${CND_DISTDIR}/Fubarino_SD_MX440_2.02/package
+CND_PACKAGE_NAME_Fubarino_SD_MX440_2.02=avrbl.x.tar
+CND_PACKAGE_PATH_Fubarino_SD_MX440_2.02=${CND_DISTDIR}/Fubarino_SD_MX440_2.02/package/avrbl.x.tar

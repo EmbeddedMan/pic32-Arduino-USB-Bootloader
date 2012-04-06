@@ -31,7 +31,7 @@ DEFAULTCONF=default
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cerebot_MX7 Microchip_USB_Starter_Kit Microchip_Ethernet_Starter_Kit MirkoElektronika_mikroMedia_Board MirkoElektronika_MultiMedia_Board Fubarino_Mini_MX250 Fubarino_SD_MX440 
+ALLCONFS=default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cerebot_MX7 Microchip_USB_Starter_Kit Microchip_Ethernet_Starter_Kit MirkoElektronika_mikroMedia_Board MirkoElektronika_MultiMedia_Board Fubarino_Mini_MX250 Fubarino_SD_MX440 Fubarino_SD_MX440_2.02 
 
 
 # build
@@ -57,6 +57,7 @@ ALLCONFS=default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cerebot_MX7 Mic
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=MirkoElektronika_MultiMedia_Board clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Fubarino_Mini_MX250 clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Fubarino_SD_MX440 clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Fubarino_SD_MX440_2.02 clean
 
 
 
@@ -74,6 +75,7 @@ ALLCONFS=default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cerebot_MX7 Mic
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=MirkoElektronika_MultiMedia_Board build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Fubarino_Mini_MX250 build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Fubarino_SD_MX440 build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Fubarino_SD_MX440_2.02 build
 
 
 
