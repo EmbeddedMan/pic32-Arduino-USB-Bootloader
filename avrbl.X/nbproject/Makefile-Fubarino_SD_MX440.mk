@@ -10,8 +10,8 @@
 # Include project Makefile
 include Makefile
 # Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-default.mk)" "nbproject/Makefile-local-default.mk"
-include nbproject/Makefile-local-default.mk
+ifeq "$(wildcard nbproject/Makefile-local-Fubarino_SD_MX440.mk)" "nbproject/Makefile-local-Fubarino_SD_MX440.mk"
+include nbproject/Makefile-local-Fubarino_SD_MX440.mk
 endif
 
 # Environment
@@ -21,7 +21,7 @@ MV=mv
 CP=cp 
 
 # Macros
-CND_CONF=default
+CND_CONF=Fubarino_SD_MX440
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
@@ -62,9 +62,9 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-Fubarino_SD_MX440.mk dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=32MX460F512L
+MP_PROCESSOR_OPTION=32MX440F256H
 MP_LINKER_FILE_OPTION=,--script="..\boot-linkerscript.ld"
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
@@ -84,63 +84,63 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${OBJECTDIR}/_ext/592584297/cdcacm.o: ../sources/cdcacm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/flash.o: ../sources/flash.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/main.o: ../sources/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o: ../sources/pic32bootloaderusb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/usb.o: ../sources/usb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/util.o: ../sources/util.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
 	
 else
 ${OBJECTDIR}/_ext/592584297/cdcacm.o: ../sources/cdcacm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/cdcacm.o.d" -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/flash.o: ../sources/flash.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/flash.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/flash.o.d" -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/main.o: ../sources/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/main.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/main.o.d" -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o: ../sources/pic32bootloaderusb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d" -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/usb.o: ../sources/usb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/usb.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/usb.o.d" -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   -fno-builtin
 	
 ${OBJECTDIR}/_ext/592584297/util.o: ../sources/util.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.d 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -I".." -I"../sources" -Os -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
+	@${FIXDEPS} "${OBJECTDIR}/_ext/592584297/util.o.d" $(SILENT) -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_FUBARINO_SD_ -I".." -I"../sources" -O1 -fomit-frame-pointer -MMD -MF "${OBJECTDIR}/_ext/592584297/util.o.d" -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   -fno-builtin
 	
 endif
 
@@ -149,7 +149,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)    -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}        -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__ICD2RAM=1,--defsym=__DEBUG=1,--defsym=_min_heap_size=0,--defsym=_min_stack_size=3072,--gc-sections,-L"../../../../Program Files/Microchip/MPLAB C32/lib",-L"../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib",-Map="$(BINDIR_)$(TARGETBASE).map" 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mdebugger -D__MPLAB_DEBUGGER_PK3=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}        -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__ICD2RAM=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,--defsym=_min_heap_size=0,--defsym=_min_stack_size=3072,--gc-sections,-L"../../../../Program Files/Microchip/MPLAB C32/lib",-L"../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib",-Map="$(BINDIR_)$(TARGETBASE).map" 
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
@@ -167,8 +167,8 @@ endif
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/default
-	${RM} -r dist/default
+	${RM} -r build/Fubarino_SD_MX440
+	${RM} -r dist/Fubarino_SD_MX440
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

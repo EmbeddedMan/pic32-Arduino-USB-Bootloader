@@ -107,7 +107,31 @@
 	#define PRGTRIS				TRISAbits.TRISA10
 	#define PRGPORT				PORTAbits.RA10
 
+#elif defined(_BOARD_FUBARINO_SD_)
+	#warning _BOARD_FUBARINO_SD_
+
+	#define	PRGSWITCH			0					//*	PRGSWITCH active high
+
+	#define	LEDTRIS				TRISEbits.TRISE5	// RE0
+	#define	LEDLAT				LATEbits.LATE5		// RE0
+	// our PRG switch
+	#define PRGTRIS				TRISEbits.TRISE7	// RE7
+	#define PRGPORT				PORTEbits.RE7		// RE7
+
+#elif defined(_BOARD_FUBARINO_MINI_)
+	#warning _BOARD_FBARINO_MINI_
+
+	#define	PRGSWITCH			0					//*	PRGSWITCH active low
+
+	#define	LEDTRIS				TRISAbits.TRISA10	// RA10
+	#define	LEDLAT				LATAbits.LATA10		// RA10
+	// our PRG switch
+	#define PRGTRIS				TRISAbits.TRISA8	// RA8
+	#define PRGPORT				PORTAbits.RA8		// RA8
+
 #else
+    #warning USING DEFAULT (NO) BOARD
+
 	#define	LEDTRIS				TRISEbits.TRISE0	// RE0
 	#define	LEDLAT				LATEbits.LATE0		// RE0
 	// our PRG switch
