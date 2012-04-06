@@ -19,14 +19,14 @@ bootloader will transfer control to the previous sketch on the MCU).
 If your board has a PRG switch (like CUI32 and UBW32), there is no 10 second
 timeout.  Instead, the procedure is:
 
-0. assume MCU is powered and connected to the USB
-1. press the PRG button and reset the MCU (MCU will enter bootloader mode and
+0. Connect MCU through USB cable to PC
+1. Press and hold the PRG button 
+2. Press and release the RESET button. (MCU will enter bootloader mode and
    enumerate CDC/ACM device and OS will create device file)
-2. start MPIDE
-3. Upload
-4. when your code works, go to step 7
-5. press the PRG button and reset the MCU (MCU will enter bootloader mode again)
-6. go to step 3.
+3. Release PRG button
+4. Start MPIDE
+5. Upload
+6. When your code works, go to step 7. Otherwise go to step 1.
 7. done!
 
 To build bits in MPLAB X that can be loaded to the bootloader, you must use a
