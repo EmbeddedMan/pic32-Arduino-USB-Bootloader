@@ -514,7 +514,9 @@ void	avrbl_print(const byte *buffer, int length)
 void	avrbl_message(byte *request, int size)
 {
 	uint ii;
+    uint32 temp;
 	uint nbytes;
+    uint fbytes;
 	uint address;
 	int rawi;
 	byte raw[64];
@@ -632,13 +634,27 @@ void	avrbl_message(byte *request, int size)
 				DumpHex(0, 32);
 			#endif
 			}
-			
-			
+
+            // we program word-at-a-time and then an optional fragment of a word
 			ASSERT(((uintptr) (request + 10)&3) == 0);
 			nbytes	=	((request[1]) << 8) | (request[2]);
+            fbytes = nbytes & 3;
+            nbytes -= fbytes;
+
+            // program the words
 			ASSERT((nbytes & 3) == 0);
 			flash_write_words((uint32 *) (FLASH_START + load_address), (uint32 *) (request + 10), nbytes / 4);
 			load_address += nbytes;
+
+            // if there was a fragment of a word left to program...
+            if (fbytes) {
+                // program the fragment
+                temp = -1;
+                memcpy(&temp, (uint32 *)(request+10+nbytes), fbytes);
+                flash_write_words((uint32 *)(FLASH_START+load_address), &temp, 1);
+                load_address += fbytes;
+                // N.B. we'll ASSERT if we attempt to program words after a fragment (illegal)
+            }
 			break;
 			
 		case CMD_READ_FLASH_ISP:
